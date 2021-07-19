@@ -20,7 +20,13 @@ body {
 }
 
 .content {
-    padding-top: 110px;
+    padding-top: 80px;
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        padding-top: 110px;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -671,4 +677,20 @@ nav {
     background-repeat: no-repeat;
     background-size: 90% 90%;
     background-position: 70px 40px;
+}
+
+.collapse {
+    opacity: 1;
+    background-color: var(--Primary-color);
+    margin-top: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and (min-width: 1200px) {
+    .collapse {
+        opacity: 1!important;
+        margin-top: 0px;
+        background-color: transparent;
+        box-shadow: none!important;
+    }
 }
