@@ -133,6 +133,16 @@ a:hover {
     background-color: var(--Primary-color)!important;
 }
 
+.bg-primary-mobile {
+    background-color: var(--Primary-color)!important;
+}
+
+@media screen and(min-width:"1200px") {
+    .bg-primary-mobile {
+        background-color: transparent!important;
+    }
+}
+
 .bg-secondary {
     background-color: var(--Secondary-color)!important;
 }
@@ -231,6 +241,16 @@ footer {
 
 .shadow-1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.shadow-1-mobile {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and(min-width:"1200px") {
+    .shadow-1-mobile {
+        box-shadow: none;
+    }
 }
 
 .shadow-1-hover:hover {
