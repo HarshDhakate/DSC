@@ -642,10 +642,11 @@ nav {
 }
 
 .Header-User {
-    margin-top: 55px;
     right: 0px;
+    top: 0px;
     position: absolute;
     min-width: 160px;
+    margin-top: 0px;
 }
 
 .dropdown-menu {
