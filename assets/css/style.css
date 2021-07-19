@@ -133,6 +133,14 @@ a:hover {
     background-color: var(--Primary-color)!important;
 }
 
+.bg-primary-hover:hover {
+    background-color: var(--Primary-color)!important;
+}
+
+.bg-light-hover:hover {
+    background-color: var(--Light-color)!important;
+}
+
 .bg-primary-mobile {
     background-color: var(--Primary-color)!important;
 }
@@ -236,6 +244,22 @@ footer {
 }
 
 .shadow-yellow-hover:hover {
+    box-shadow: var(--Yellow-color-05) 0px 8px 24px;
+}
+
+.shadow-red {
+    box-shadow: var(--Red-color-05) 0px 8px 24px;
+}
+
+.shadow-blue {
+    box-shadow: var(--Blue-color-05) 0px 8px 24px;
+}
+
+.shadow-green {
+    box-shadow: var(--Green-color-05) 0px 8px 24px;
+}
+
+.shadow-yellow {
     box-shadow: var(--Yellow-color-05) 0px 8px 24px;
 }
 
@@ -488,6 +512,10 @@ nav {
     z-index: 3;
 }
 
+.z-index-4 {
+    z-index: 4;
+}
+
 #Collaborate::before {
     content: "Collaborate";
 }
@@ -594,6 +622,29 @@ nav {
 }
 
 .accountSetting {
-    padding: 12px 22px;
+    padding: 12px 16px;
     margin-top: 4px;
+    z-index: 11;
+}
+
+.Header-User {
+    margin-top: 55px;
+    right: 0px;
+    position: absolute;
+}
+
+.dropdown-menu {
+    margin-top: -14px;
+    left: -18px;
+    padding: 4px;
+}
+
+#dropdownMenuButton:hover,
+#dropdownMenuButton:focus {
+    background-color: var(--Blue-color)!important;
+    color: var(--Primary-color)!important;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
 }
