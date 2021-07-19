@@ -663,3 +663,10 @@ nav {
 .dropdown-item {
     padding: 8px 12px;
 }
+
+.CreateUser {
+    background-image: url("../images/BG-CreateUser.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 70px 30px;
+}
