@@ -665,8 +665,8 @@ nav {
 }
 
 .CreateUser {
-    background-image: url("../images/BG-CreateUser.svg");
+    background-image: url("../images/BG-CreateUser.webp");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 70px 30px;
+    background-size: 90% 90%;
+    background-position: 70px 40px;
 }
