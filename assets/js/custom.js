@@ -10,7 +10,7 @@ window.onload = function() {
         el: document.getElementById('body'),
         smooth: true,
         lerp: 0.075,
-        touchMultiplier: 3,
+        touchMultiplier: 4,
         smartphone: {
             smooth: true,
             lerp: 0.075
@@ -26,13 +26,11 @@ window.onload = function() {
         $("#preloader").remove();
         document.getElementById("body").style.opacity = "1";
 
-        if (cookie.Name != null || cookie.Name.trim() != "") {
+        if (cookie.Name != null) {
             $("#UserNameChangeBtn").text("Edit");
             UpdateName();
             updateNameModal();
         }
-
-
     }, 500);
 }
 
@@ -142,7 +140,7 @@ function SubscribeToNewsLetter() {
                 SetSubscribeCookie()
             )
         } else {
-            DisplayMsg(0, 'Invalid Email!', 'Please Enater A Valid Email', 4000, 'b');
+            DisplayMsg(1, 'Invalid Email!', 'Please Enater A Valid Email', 4000, 'b');
         }
     }
 
@@ -161,7 +159,8 @@ function updateNameModal() {
 }
 
 function UpdateName() {
-    $("#dropdownMenuButton").text(cookie.Name + "	");
+    if (cookie.Name != "")
+        $("#dropdownMenuButton").text(cookie.Name + "	");
 }
 
 
@@ -172,6 +171,12 @@ function SetSubscribeCookie() {
 
 function SetNameCookie(val) {
     document.cookie = "Name=" + val;
+    if (cookie.Name != null) {
+        DisplayMsg(0, 'Updated!', 'Name Updated Successfully', 4000, 'b');
+    } else {
+        DisplayMsg(0, 'Created!', 'New Name Created', 4000, 'b');
+    }
+
     cookie = GetCookie();
 }
 
