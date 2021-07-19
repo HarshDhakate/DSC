@@ -9,11 +9,11 @@ window.onload = function() {
         lerp: 0.075,
         smartphone: {
             smooth: true,
-            lerp: 0.35
+            lerp: 0.45
         },
         tablet: {
             smooth: true,
-            lerp: 0.35
+            lerp: 0.45
         },
 
     });
