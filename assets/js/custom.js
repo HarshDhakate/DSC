@@ -9,7 +9,16 @@ window.onload = function() {
         scroll = new LocomotiveScroll({
             el: document.getElementById('body'),
             smooth: true,
+            smartphone: {
+                smooth: true,
+                lerp: 1
+            },
+            tablet: {
+                smooth: true,
+                lerp: 1
+            },
             lerp: 0.08
         });
+
     }, 500);
 }
