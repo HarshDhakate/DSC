@@ -90,3 +90,32 @@ async function removeDisplayMsg(x) {
         $("#AlertMsg").removeClass("show");
     }, x);
 }
+
+var isFullScreen = false;
+
+function ToggleFullscreen() {
+    const btn = $("#fullscreen");
+    const elem = document.body;
+    if (isFullScreen == false) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+        isFullScreen = true;
+        btn.text("Exit Full Screen");
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+        isFullScreen = false;
+        btn.text("Full Screen");
+    }
+
+}

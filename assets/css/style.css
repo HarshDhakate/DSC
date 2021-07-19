@@ -15,7 +15,12 @@
 }
 
 body {
+    background-color: var(--Primary-color);
     color: var(--Secondary-color);
+}
+
+.content {
+    padding-top: 110px;
 }
 
 ::-webkit-scrollbar {
@@ -23,6 +28,7 @@ body {
 }
 
 #body {
+    background-color: var(--Primary-color);
     opacity: 0;
 }
 
@@ -635,7 +641,7 @@ nav {
 
 .dropdown-menu {
     margin-top: -14px;
-    left: -18px;
+    left: -34px;
     padding: 4px;
 }
 

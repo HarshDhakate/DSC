@@ -63,10 +63,13 @@
                   User Name
                 </button>
                     <div class="dropdown-menu fade border-8 border-0 shadow-1" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item smooth-transition border-8" href="#" onclick="DisplayMsg(1,'Wait!', 'We Are Working On It', 0, 'b')">
+                        <a class="dropdown-item bg-secondary-background smooth-transition border-8 cursor-pointer" id="fullscreen" onclick="ToggleFullscreen()">
+                            Full Screen
+                        </a>
+                        <a class="dropdown-item smooth-transition border-8 cursor-pointer" onclick="DisplayMsg(1,'Wait!', 'We Are Working On It', 0, 'b')">
                             Dark Mode
                         </a>
-                        <a class="dropdown-item bg-secondary-background smooth-transition border-8" href="#" onclick="DisplayMsg(1,'Wait!', 'We Are Working On It', 0, 'b')">
+                        <a class="dropdown-item bg-secondary-background smooth-transition border-8 cursor-pointer" onclick="DisplayMsg(1,'Wait!', 'We Are Working On It', 0, 'b')">
                             Create
                         </a>
                     </div>
@@ -103,7 +106,7 @@
 
 
 
-        <div class="content mt-lg-5 pt-lg-5 mt-5 pt-5" data-scroll-section>
+        <div class="content" data-scroll-section>
 
             <div class="jumbotron bg-light jumbotron-fluid mx-lg-5 mx-2 mt-lg-3 mt-1 border-24 p-lg-5 py-5 px-1 smooth-transition" data-scroll data-scroll-speed="5">
                 <div class="container py-4">
