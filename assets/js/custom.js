@@ -6,15 +6,16 @@ window.onload = function() {
     scroll = new LocomotiveScroll({
         el: document.getElementById('body'),
         smooth: true,
+        lerp: 0.1,
         smartphone: {
             smooth: true,
-            lerp: 0.1
+            lerp: 0.15
         },
         tablet: {
             smooth: true,
-            lerp: 0.08
+            lerp: 0.15
         },
-        lerp: 0.1
+
     });
 
     setTimeout(() => {
