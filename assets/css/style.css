@@ -281,6 +281,10 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
 }
 
+.shadow-7 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
 .shadow-3-hover:hover {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -574,4 +578,22 @@ nav {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 0px;
+    z-index: 3;
+    right: 0px;
+    opacity: 1;
+}
+
+.hide-scroll-top {
+    bottom: -100;
+    opacity: 0;
+}
+
+.accountSetting {
+    padding: 12px 22px;
+    margin-top: 4px;
 }
