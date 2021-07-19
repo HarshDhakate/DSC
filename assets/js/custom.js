@@ -1,7 +1,10 @@
 var scroll;
+var cookie = GetCookie();
 
 window.onload = function() {
     document.getElementById("preloader").style.opacity = "0";
+
+
 
     scroll = new LocomotiveScroll({
         el: document.getElementById('body'),
@@ -22,6 +25,14 @@ window.onload = function() {
     setTimeout(() => {
         $("#preloader").remove();
         document.getElementById("body").style.opacity = "1";
+
+        if (cookie.Name != null || cookie.Name.trim() != "") {
+            $("#UserNameChangeBtn").text("Edit");
+            UpdateName();
+            updateNameModal();
+        }
+
+
     }, 500);
 }
 
@@ -50,7 +61,7 @@ async function DisplayMsg(cssClass, HeadingText, ContentText, timer, pos) {
 
     */
 
-    let classes = ["bg-green", "bg-red shadow-red", "bg-yellow", "bg-blue-05"];
+    let classes = ["bg-green shadow-green", "bg-red shadow-red", "bg-yellow shadow-yellow", "bg-blue-05"];
 
     if (pos == "t") {
         $("#AlertMsg").css("top", "0px");
@@ -95,7 +106,6 @@ async function removeDisplayMsg(x) {
 
 function ToggleFullscreen() {
     const btn = $("#fullscreen");
-
     if (!document.fullscreenElement) {
         document.body.requestFullscreen();
         btn.text("Exit Full Screen");
@@ -105,4 +115,69 @@ function ToggleFullscreen() {
             btn.text("Full Screen");
         }
     }
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function SubscribeToNewsLetter() {
+    var link = "https://script.google.com/macros/s/AKfycbyZ92WcGwRnI0ndx1M5zy3OukWV4uzcat4FpVv9RvHOZo_JQa4/exec";
+    const form = document.getElementsByClassName('SubscribeToNewsLetter');
+    const btn = document.getElementById('SubscribeToNewsLetterBtn');
+
+    if (cookie.isSubscribe == "true") {
+        DisplayMsg(2, 'Congratulations!', 'You Are Already Subscribed To Our News Letter', 4000, 'b');
+
+
+    } else {
+        if (validateEmail($("[name='email']").val())) {
+            fetch(link, {
+                method: 'POST',
+                body: new FormData(form[0])
+            }).then(
+                $("[name='email']").val(""),
+                DisplayMsg(0, 'Congratulations!', 'You Are Subscribed To Our News Letter', 4000, 'b'),
+                SetSubscribeCookie()
+            )
+        } else {
+            DisplayMsg(0, 'Invalid Email!', 'Please Enater A Valid Email', 4000, 'b');
+        }
+    }
+
+}
+
+
+function SaveUserName() {
+    SetNameCookie($("#UserName").val());
+    UpdateName();
+}
+
+function updateNameModal() {
+    $("#UserNameModalTitle").text("Edit Your Full Name");
+    $("#UserName").val(cookie.Name);
+    $("#CreateNameBtn").text("Update");
+}
+
+function UpdateName() {
+    $("#dropdownMenuButton").text(cookie.Name + "	");
+}
+
+
+function SetSubscribeCookie() {
+    document.cookie = "isSubscribe=" + true;
+    cookie = GetCookie();
+}
+
+function SetNameCookie(val) {
+    document.cookie = "Name=" + val;
+    cookie = GetCookie();
+}
+
+function GetCookie() {
+    return document.cookie
+        .split(';')
+        .map(cookie => cookie.split('='))
+        .reduce((accumulator, [key, value]) => ({...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 }
