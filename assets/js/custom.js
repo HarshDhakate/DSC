@@ -23,3 +23,11 @@ window.onload = function() {
         document.getElementById("body").style.opacity = "1";
     }, 500);
 }
+
+
+
+function ToogleMenu() {
+    $(".navbar-nav").toggleClass("Nav-Display-None");
+
+    document.getElementsByClassName("nav-item")[OnloadPage].classList.add("active");
+}

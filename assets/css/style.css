@@ -312,6 +312,7 @@ nav {
 .nav-item {
     margin: 18px 8px 0px 8px;
     width: 120px;
+    opacity: 1;
 }
 
 .nav-item .nav-link .icon {
@@ -327,8 +328,23 @@ nav {
 }
 
 .nav-item.active .nav-link {
-    background-color: var(--Red-color)!important;
     color: white!important;
+}
+
+.nav-item.active .bg-red-active {
+    background-color: var(--Red-color)!important;
+}
+
+.nav-item.active .bg-blue-active {
+    background-color: var(--Blue-color)!important;
+}
+
+.nav-item.active .bg-green-active {
+    background-color: var(--Green-color)!important;
+}
+
+.nav-item.active .bg-yellow-active {
+    background-color: var(--Yellow-color)!important;
 }
 
 .nav-link {
@@ -535,4 +551,27 @@ nav {
     height: 70px;
     margin-top: 20px;
     opacity: 1;
+}
+
+.Nav-Display-None .nav-item {
+    z-index: -1;
+    height: 0px;
+    top: 14px;
+    opacity: 0;
+}
+
+.center-Icon {
+    height: 75px;
+}
+
+.Nav-Display-None .nav-item.active {
+    z-index: -3;
+}
+
+.Nav-Display-None .nav-item.active .nav-link {
+    box-shadow: none!important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

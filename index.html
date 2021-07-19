@@ -29,6 +29,10 @@
 
     <script src="./assets/js/locomotive-scroll.js"></script>
 
+    <script>
+        var OnloadPage = 0;
+    </script>
+
 </head>
 
 <body class="user-select-none" oncontextmenu="return false;">
@@ -48,15 +52,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto px-5 text-center">
-                    <li class="nav-item active mx-auto mx-lg-2">
-                        <a class="nav-link bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-red-hover bg-red-hover fg-primary-hover" href="#">
+                    <li class="nav-item active mx-auto mx-lg-2 smooth-transition-2">
+                        <a class="nav-link bg-red-active bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-red-hover bg-red-hover fg-primary-hover" href="#">
                             <svg class="icon" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z"/>
                             </svg> Home
                         </a>
                     </li>
-                    <li class="nav-item mx-auto mx-lg-2">
-                        <a class="nav-link bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-blue-hover bg-blue-hover fg-primary-hover" href="#">
+                    <li class="nav-item mx-auto mx-lg-2 smooth-transition">
+                        <a class="nav-link bg-blue-active bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-blue-hover bg-blue-hover fg-primary-hover" href="#">
                             <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 7.5C7.75 5.15279 9.65279 3.25 12 3.25C14.3472 3.25 16.25 5.15279 16.25 7.5C16.25 9.84721 14.3472 11.75 12 11.75C9.65279 11.75 7.75 9.84721 7.75 7.5ZM12 4.75C10.4812 4.75 9.25 5.98122 9.25 7.5C9.25 9.01878 10.4812 10.25 12 10.25C13.5188 10.25 14.75 9.01878 14.75 7.5C14.75 5.98122 13.5188 4.75 12 4.75Z" fill="black"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.75C6.75736 14.75 5.75 15.7574 5.75 17V18.1883C5.75 18.2064 5.76311 18.2218 5.78097 18.2247C9.89972 18.8972 14.1003 18.8972 18.219 18.2247C18.2369 18.2218 18.25 18.2064 18.25 18.1883V17C18.25 15.7574 17.2426 14.75 16 14.75H15.6591C15.6328 14.75 15.6066 14.7542 15.5815 14.7623L14.716 15.045C12.9512 15.6212 11.0488 15.6212 9.28398 15.045L8.41847 14.7623C8.39342 14.7542 8.36722 14.75 8.34087 14.75H8ZM4.25 17C4.25 14.9289 5.92893 13.25 8 13.25H8.34087C8.52536 13.25 8.70869 13.2792 8.88407 13.3364L9.74959 13.6191C11.2119 14.0965 12.7881 14.0965 14.2504 13.6191L15.1159 13.3364C15.2913 13.2792 15.4746 13.25 15.6591 13.25H16C18.0711 13.25 19.75 14.9289 19.75 17V18.1883C19.75 18.9415 19.2041 19.5837 18.4607 19.7051C14.1819 20.4037 9.8181 20.4037 5.53927 19.7051C4.79588 19.5837 4.25 18.9415 4.25 18.1883V17Z" fill="black"/>
@@ -64,12 +68,12 @@
 
                         </a>
                     </li>
-                    <a href="#" class="shadow-1 border-50 bg-white p-2 mx-3 smooth-transition d-none d-lg-inline"><svg xmlns="http://www.w3.org/2000/svg" height="60" viewBox="0 0 816 816"><rect width="816" height="816" fill="none"/><path d="M66.9,394.2c5.6-22.3,20.7-35.3,41.9-42.2,15.7-7,30.6-4.6,44.8,4.2,26.4,16.2,57.6,25.1,78.2,50.4l101.6,60.1c32.5,19.3,42.8,50.9,26.1,79.6s-48.2,35-80.1,16.9C217.7,528.3,156.5,492.5,95,457.3c-14.4-8.3-24.1-20-28.1-36.2" transform="translate(0.3 0.3)" fill="#5186eb"/><path d="M748.5,410.6c-1.6,28-17.9,44.3-43.5,52.7-9.1,3.2-18.8,7.1-27.9,3.1-34-15-67.9-30.6-94.7-57.6-33.7-20-67.5-40-101.1-60.1s-43.3-50.5-27.2-79.2,48.7-35.7,82.1-16.8c59.2,33.6,117.9,68.1,177.1,101.7,22.2,12.7,36.8,29.3,35.2,56.2" transform="translate(0.3 0.3)" fill="#45995e"/><path d="M231.8,406.6c-24.5-13.6-49.2-26.7-73.2-41.1-15.6-9.3-31.7-14.6-49.8-13.5,59.5-34.9,118.6-70.6,178.9-104.2,26.6-14.9,58.3-3.3,72.4,22.4s6.7,58.1-21.3,75.1C303.6,366.6,267.5,386.2,231.8,406.6Z" transform="translate(0.3 0.3)" fill="#d95040"/><path d="M582.4,408.8c23.6,13.1,47.8,25.4,70.8,39.5,16.2,9.9,32.9,15.8,51.8,15-58.7,34.5-117.1,69.6-176.3,103.2-27,15.2-58,5.8-73.5-19.4s-9.4-58.5,18.1-75.6C508.9,449.4,546,429.6,582.4,408.8Z" transform="translate(0.3 0.3)" fill="#f0bb41"/></svg></a>
-                    <li class="nav-item mx-auto mx-lg-2">
-                        <a class="nav-link bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-green-hover bg-green-hover fg-primary-hover" href="#">Events</a>
+                    <a onclick="ToogleMenu()" class="cursor-pointer center-Icon shadow-1 border-50 bg-white p-2 mx-3 smooth-transition d-none d-lg-inline"><svg xmlns="http://www.w3.org/2000/svg" height="60" viewBox="0 0 816 816"><rect width="816" height="816" fill="none"/><path d="M66.9,394.2c5.6-22.3,20.7-35.3,41.9-42.2,15.7-7,30.6-4.6,44.8,4.2,26.4,16.2,57.6,25.1,78.2,50.4l101.6,60.1c32.5,19.3,42.8,50.9,26.1,79.6s-48.2,35-80.1,16.9C217.7,528.3,156.5,492.5,95,457.3c-14.4-8.3-24.1-20-28.1-36.2" transform="translate(0.3 0.3)" fill="#5186eb"/><path d="M748.5,410.6c-1.6,28-17.9,44.3-43.5,52.7-9.1,3.2-18.8,7.1-27.9,3.1-34-15-67.9-30.6-94.7-57.6-33.7-20-67.5-40-101.1-60.1s-43.3-50.5-27.2-79.2,48.7-35.7,82.1-16.8c59.2,33.6,117.9,68.1,177.1,101.7,22.2,12.7,36.8,29.3,35.2,56.2" transform="translate(0.3 0.3)" fill="#45995e"/><path d="M231.8,406.6c-24.5-13.6-49.2-26.7-73.2-41.1-15.6-9.3-31.7-14.6-49.8-13.5,59.5-34.9,118.6-70.6,178.9-104.2,26.6-14.9,58.3-3.3,72.4,22.4s6.7,58.1-21.3,75.1C303.6,366.6,267.5,386.2,231.8,406.6Z" transform="translate(0.3 0.3)" fill="#d95040"/><path d="M582.4,408.8c23.6,13.1,47.8,25.4,70.8,39.5,16.2,9.9,32.9,15.8,51.8,15-58.7,34.5-117.1,69.6-176.3,103.2-27,15.2-58,5.8-73.5-19.4s-9.4-58.5,18.1-75.6C508.9,449.4,546,429.6,582.4,408.8Z" transform="translate(0.3 0.3)" fill="#f0bb41"/></svg></a>
+                    <li class="nav-item mx-auto mx-lg-2 smooth-transition">
+                        <a class="nav-link bg-green-active bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-green-hover bg-green-hover fg-primary-hover" href="#">Events</a>
                     </li>
-                    <li class="nav-item mx-auto mx-lg-2">
-                        <a class="nav-link bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-yellow-hover bg-yellow-hover fg-primary-hover" href="#">Discord</a>
+                    <li class="nav-item mx-auto mx-lg-2 smooth-transition">
+                        <a class="nav-link bg-yellow-active bg-white shadow-1 border-16 font-weight-600 smooth-transition shadow-yellow-hover bg-yellow-hover fg-primary-hover" href="#">Discord</a>
                     </li>
                 </ul>
             </div>
