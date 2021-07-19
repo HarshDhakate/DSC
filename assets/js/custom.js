@@ -7,7 +7,7 @@ window.onload = function() {
         el: document.getElementById('body'),
         smooth: true,
         lerp: 0.075,
-        touchMultiplier: 4,
+        touchMultiplier: 3,
         smartphone: {
             smooth: true,
             lerp: 0.075
