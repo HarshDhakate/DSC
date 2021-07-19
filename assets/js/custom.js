@@ -8,13 +8,13 @@ window.onload = function() {
         smooth: true,
         smartphone: {
             smooth: true,
-            lerp: 1
+            lerp: 0.1
         },
         tablet: {
             smooth: true,
-            lerp: 1
+            lerp: 0.08
         },
-        lerp: 0.08
+        lerp: 0.1
     });
 
     setTimeout(() => {
