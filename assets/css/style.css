@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--Primary-color);
+    background-color: var(--Light-color);
     color: var(--Secondary-color);
 }
 
