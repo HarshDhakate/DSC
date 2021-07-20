@@ -11,14 +11,14 @@ window.onload = function() {
         smooth: true,
         lerp: 0.075,
         touchMultiplier: 4,
-        smartphone: {
-            smooth: true,
-            lerp: 0.075
-        },
-        tablet: {
-            smooth: true,
-            lerp: 0.075
-        },
+        /*         smartphone: {
+                    smooth: true,
+                    lerp: 0.075
+                },
+                tablet: {
+                    smooth: true,
+                    lerp: 0.075
+                }, */
 
     });
 
