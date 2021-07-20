@@ -450,7 +450,7 @@ nav {
 }
 
 .nav-item .nav-link .icon path {
-    fill: var(--Primary-color);
+    fill: var(--muted-color-2);
 }
 
 .nav-item.active .nav-link .icon {
