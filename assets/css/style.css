@@ -21,6 +21,7 @@
     --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
     --shadow-6: rgba(0, 0, 0, 0.04) 0px 4px 12px;
     --shadow-7: rgba(0, 0, 0, 0.1) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    --filter: none;
 }
 
 html[data-theme='light'] {
@@ -46,6 +47,7 @@ html[data-theme='light'] {
     --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
     --shadow-6: rgba(0, 0, 0, 0.04) 0px 4px 12px;
     --shadow-7: rgba(0, 0, 0, 0.2) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    --filter: none;
 }
 
 html[data-theme='dark'] {
@@ -71,6 +73,11 @@ html[data-theme='dark'] {
     --shadow-5: rgba(200, 200, 200, 0.2) 0px 0px 0px 1px;
     --shadow-6: rgba(0, 0, 0, 0.2) 0px 0px 22px;
     --shadow-7: rgba(0, 0, 0, 0.5) 0px 4px 30px, rgba(50, 50, 93, 0.45) 0px 30px 60px -12px, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px;
+    --filter: invert();
+}
+
+.filter-inverse {
+    filter: var(--filter);
 }
 
 body {
