@@ -12,6 +12,65 @@
     --Secondary-color-2: #303030;
     --Light-color: rgb(247, 248, 249);
     --Light-color-2: rgb(237, 238, 239);
+    --muted-color: #6c757d;
+    --muted-color-2: #ffffff;
+    --muted-color-3: #6c757d;
+    --footer-img: url("../images/BottomImage.svg");
+    --shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --shadow-2-hover: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    --shadow-6: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+    --shadow-7: rgba(0, 0, 0, 0.1) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+html[data-theme='light'] {
+    --Blue-color: rgb(66, 133, 244);
+    --Red-color: rgb(234, 67, 53);
+    --Yellow-color: rgb(251, 188, 4);
+    --Green-color: rgb(52, 168, 83);
+    --Blue-color-05: rgba(66, 133, 244, 0.5);
+    --Red-color-05: rgba(234, 67, 53, 0.5);
+    --Yellow-color-05: rgba(251, 188, 4, 0.5);
+    --Green-color-05: rgba(52, 168, 83, 0.5);
+    --Primary-color: #fff;
+    --Secondary-color: #000000;
+    --Secondary-color-2: #303030;
+    --Light-color: rgb(247, 248, 249);
+    --Light-color-2: rgb(237, 238, 239);
+    --muted-color: #6c757d;
+    --muted-color-2: #ffffff;
+    --muted-color-3: #6c757d;
+    --footer-img: url("../images/BottomImage.svg");
+    --shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --shadow-2-hover: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    --shadow-6: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+    --shadow-7: rgba(0, 0, 0, 0.2) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+html[data-theme='dark'] {
+    --Blue-color: rgb(66, 133, 244);
+    --Red-color: rgb(234, 67, 53);
+    --Yellow-color: rgb(251, 188, 4);
+    --Green-color: rgb(52, 168, 83);
+    --Blue-color-05: rgba(66, 133, 244, 0.5);
+    --Red-color-05: rgba(234, 67, 53, 0.5);
+    --Yellow-color-05: rgba(251, 188, 4, 0.5);
+    --Green-color-05: rgba(52, 168, 83, 0.5);
+    --Primary-color: rgb(26, 26, 26);
+    --Secondary-color: #fff;
+    --Secondary-color-2: rgb(36, 36, 36);
+    --Light-color: rgb(49, 49, 49);
+    --Light-color-2: rgb(36, 36, 36);
+    --muted-color: rgb(223, 223, 223);
+    --muted-color-2: #ffffff;
+    --muted-color-3: rgb(37, 37, 37);
+    --footer-img: url("../images/BottomImageDark.svg");
+    --shadow-1: rgba(0, 0, 0, 0.45) 0px 0px 24px;
+    --shadow-2-hover: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shadow-5: rgba(200, 200, 200, 0.2) 0px 0px 0px 1px;
+    --shadow-6: rgba(0, 0, 0, 0.2) 0px 0px 22px;
+    --shadow-7: rgba(0, 0, 0, 0.5) 0px 4px 30px, rgba(50, 50, 93, 0.45) 0px 30px 60px -12px, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px;
 }
 
 body {
@@ -207,8 +266,24 @@ a:hover {
     color: var(--Secondary-color-2)!important;
 }
 
+.fg-white-hover:hover {
+    color: white!important;
+}
+
+.fg-muted {
+    color: var(--muted-color)!important;
+}
+
+.fg-muted-2 {
+    color: var(--muted-color-2)!important;
+}
+
+.fg-muted-3-hover:hover {
+    color: var(--muted-color-3)!important;
+}
+
 .bg-light {
-    background-color: var(--Light-color);
+    background-color: var(--Light-color)!important;
 }
 
 .social-media-icon {
@@ -225,7 +300,7 @@ a:hover {
 footer {
     position: relative;
     background-color: transparent;
-    background-image: url("../images/BottomImage.svg");
+    background-image: var(--footer-img);
     background-size: cover;
     background-position: bottom 0 left 0;
     background-repeat: no-repeat;
@@ -280,11 +355,11 @@ footer {
 }
 
 .shadow-1 {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: var(--shadow-1);
 }
 
 .shadow-1-mobile {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: var(--shadow-1);
 }
 
 @media screen and(min-width:"1200px") {
@@ -294,15 +369,15 @@ footer {
 }
 
 .shadow-1-hover:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: var(--shadow-1);
 }
 
 .shadow-2 {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: var(--shadow-2-hover);
 }
 
 .shadow-2-hover:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: var(--shadow-2-hover);
 }
 
 .shadow-3 {
@@ -314,15 +389,15 @@ footer {
 }
 
 .shadow-5 {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: var(--shadow-5);
 }
 
 .shadow-6 {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+    box-shadow: var(--shadow-6);
 }
 
 .shadow-7 {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    box-shadow: var(--shadow-7);
 }
 
 .shadow-8 {
@@ -501,7 +576,7 @@ nav {
 
 .card-header {
     min-height: 320px;
-    background-color: white!important;
+    background-color: var(--Primary-color)!important;
     border-radius: 16px!important;
 }
 
@@ -683,7 +758,7 @@ nav {
     opacity: 1;
     background-color: var(--Primary-color);
     margin-top: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: var(--shadow-1);
 }
 
 @media screen and (min-width: 1200px) {

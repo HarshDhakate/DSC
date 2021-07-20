@@ -3,7 +3,7 @@ var cookie = GetCookie();
 
 window.onload = function() {
     document.getElementById("preloader").style.opacity = "0";
-
+    DisplayDarkMode();
 
 
     scroll = new LocomotiveScroll({
@@ -163,6 +163,36 @@ function UpdateName() {
         $("#dropdownMenuButton").text(cookie.Name + "	");
 }
 
+function ToggleDarkMode() {
+    var val = GetDarkModeCookie();
+    if (val == "false")
+        val = true;
+    else
+        val = false;
+
+    SetDarkModeCookie(val);
+    DisplayDarkMode();
+}
+
+function DisplayDarkMode() {
+    var DarkMode = GetDarkModeCookie();
+    if (DarkMode == "true") {
+        ChangeColor("dark");
+    } else {
+        ChangeColor("light");
+    }
+}
+
+function ChangeColor(targetTheme) {
+    /* To check for spelling errors */
+    if (targetTheme == "dark") {
+        targetTheme = "dark";
+    } else {
+        targetTheme = "light";
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme)
+}
+
 
 function SetSubscribeCookie() {
     document.cookie = "isSubscribe=" + true;
@@ -176,8 +206,27 @@ function SetNameCookie(val) {
     } else {
         DisplayMsg(0, 'Created!', 'New Name Created', 4000, 'b');
     }
-
     cookie = GetCookie();
+}
+
+function SetDarkModeCookie(val) {
+    document.cookie = "DarkMode=" + val;
+    cookie = GetCookie();
+}
+
+function GetDarkModeCookie() {
+    if (cookie.DarkMode != null) {
+        if (cookie.DarkMode == "true") {
+            $("#DarkMode").text("Light Mode");
+        } else {
+            $("#DarkMode").text("Dark Mode");
+        }
+        return cookie.DarkMode;
+    } else {
+        $("#DarkMode").text("Dark Mode");
+        SetDarkModeCookie(false);
+        return false;
+    }
 }
 
 function GetCookie() {
