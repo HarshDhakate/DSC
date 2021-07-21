@@ -1,10 +1,8 @@
 var scroll;
-var cookie = GetCookie();
 
 window.onload = function() {
-    document.getElementById("preloader").style.opacity = "0";
     DisplayDarkMode();
-
+    document.getElementById("preloader").style.opacity = "0";
 
     scroll = new LocomotiveScroll({
         el: document.getElementById('body'),
@@ -26,7 +24,7 @@ window.onload = function() {
         $("#preloader").remove();
         document.getElementById("body").style.opacity = "1";
 
-        if (cookie.Name != null) {
+        if (localStorage.getItem("Name") != null) {
             $("#UserNameChangeBtn").text("Edit");
             UpdateName();
             updateNameModal();
@@ -125,7 +123,7 @@ function SubscribeToNewsLetter() {
     const form = document.getElementsByClassName('SubscribeToNewsLetter');
     const btn = document.getElementById('SubscribeToNewsLetterBtn');
 
-    if (cookie.isSubscribe == "true") {
+    if (localStorage.getItem("isSubscribe") == "true") {
         DisplayMsg(2, 'Congratulations!', 'You Are Already Subscribed To Our News Letter', 4000, 'b');
 
 
@@ -154,13 +152,13 @@ function SaveUserName() {
 
 function updateNameModal() {
     $("#UserNameModalTitle").text("Edit Your Full Name");
-    $("#UserName").val(cookie.Name);
+    $("#UserName").val(localStorage.getItem("Name"));
     $("#CreateNameBtn").text("Update");
 }
 
 function UpdateName() {
-    if (cookie.Name != "")
-        $("#dropdownMenuButton").text(cookie.Name + "	");
+    if (localStorage.getItem("Name") != "")
+        $("#dropdownMenuButton").text(localStorage.getItem("Name") + "	");
 }
 
 function ToggleDarkMode() {
@@ -195,43 +193,33 @@ function ChangeColor(targetTheme) {
 
 
 function SetSubscribeCookie() {
-    document.cookie = "isSubscribe=" + true;
-    cookie = GetCookie();
+    localStorage.setItem("isSubscribe", val);
 }
 
 function SetNameCookie(val) {
-    document.cookie = "Name=" + val;
-    if (cookie.Name != null) {
+    if (localStorage.getItem("Name") != null) {
         DisplayMsg(0, 'Updated!', 'Name Updated Successfully', 4000, 'b');
     } else {
         DisplayMsg(0, 'Created!', 'New Name Created', 4000, 'b');
     }
-    cookie = GetCookie();
+    localStorage.setItem("Name", val);
 }
 
 function SetDarkModeCookie(val) {
-    document.cookie = "DarkMode=" + val;
-    cookie = GetCookie();
+    localStorage.setItem("DarkMode", val);
 }
 
 function GetDarkModeCookie() {
-    if (cookie.DarkMode != null) {
-        if (cookie.DarkMode == "true") {
+    if (localStorage.getItem("DarkMode") != null) {
+        if (localStorage.getItem("DarkMode") == "true") {
             $("#DarkMode").text("Light Mode");
         } else {
             $("#DarkMode").text("Dark Mode");
         }
-        return cookie.DarkMode;
+        return localStorage.getItem("DarkMode");
     } else {
         $("#DarkMode").text("Dark Mode");
         SetDarkModeCookie(false);
         return false;
     }
-}
-
-function GetCookie() {
-    return document.cookie
-        .split(';')
-        .map(cookie => cookie.split('='))
-        .reduce((accumulator, [key, value]) => ({...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 }

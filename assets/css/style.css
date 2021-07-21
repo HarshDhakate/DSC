@@ -16,6 +16,7 @@
     --muted-color-2: #ffffff;
     --muted-color-3: #6c757d;
     --footer-img: url("../images/BottomImage.svg");
+    --BG-createUser: url("../images/BG-CreateUser.webp");
     --shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --shadow-2-hover: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
@@ -42,6 +43,7 @@ html[data-theme='light'] {
     --muted-color-2: #ffffff;
     --muted-color-3: #6c757d;
     --footer-img: url("../images/BottomImage.svg");
+    --BG-createUser: url("../images/BG-CreateUser.webp");
     --shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --shadow-2-hover: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     --shadow-5: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
@@ -68,6 +70,7 @@ html[data-theme='dark'] {
     --muted-color-2: #ffffff;
     --muted-color-3: rgb(37, 37, 37);
     --footer-img: url("../images/BottomImageDark.svg");
+    --BG-createUser: url("../images/BG-CreateUser1.webp");
     --shadow-1: rgba(0, 0, 0, 0.45) 0px 0px 24px;
     --shadow-2-hover: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     --shadow-5: rgba(200, 200, 200, 0.2) 0px 0px 0px 1px;
@@ -757,7 +760,7 @@ nav {
 }
 
 .CreateUser {
-    background-image: url("../images/BG-CreateUser.webp");
+    background-image: var(--BG-createUser);
     background-repeat: no-repeat;
     background-size: 90% 90%;
     background-position: 70px 40px;
