@@ -123,6 +123,10 @@ a:hover {
     transition: all .4s ease;
 }
 
+.transistion-dealy-01 {
+    transition-delay: 0.1s!important;
+}
+
 .smooth-transition-2 {
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -575,6 +579,10 @@ nav {
     content: "Code Of Conduct";
 }
 
+#team::before {
+    content: "Team";
+}
+
 #Opportunities::before {
     content: "Opportunities";
 }
@@ -596,6 +604,7 @@ nav {
 
 .Oppotunities .card-header {
     min-height: 320px;
+    max-height: 320px;
     background-color: var(--Primary-color)!important;
     border-radius: 16px!important;
 }
