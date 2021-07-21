@@ -123,24 +123,20 @@ function SubscribeToNewsLetter() {
     const form = document.getElementsByClassName('SubscribeToNewsLetter');
     const btn = document.getElementById('SubscribeToNewsLetterBtn');
 
-    if (localStorage.getItem("isSubscribe") == "true") {
-        DisplayMsg(2, 'Congratulations!', 'You Are Already Subscribed To Our News Letter', 4000, 'b');
 
-
+    if (validateEmail($("[name='email']").val())) {
+        fetch(link, {
+            method: 'POST',
+            body: new FormData(form[0])
+        }).then(
+            $("[name='email']").val(""),
+            DisplayMsg(0, 'Congratulations!', 'You Are Subscribed To Our News Letter', 4000, 'b'),
+            SetSubscribeCookie()
+        )
     } else {
-        if (validateEmail($("[name='email']").val())) {
-            fetch(link, {
-                method: 'POST',
-                body: new FormData(form[0])
-            }).then(
-                $("[name='email']").val(""),
-                DisplayMsg(0, 'Congratulations!', 'You Are Subscribed To Our News Letter', 4000, 'b'),
-                SetSubscribeCookie()
-            )
-        } else {
-            DisplayMsg(1, 'Invalid Email!', 'Please Enater A Valid Email', 4000, 'b');
-        }
+        DisplayMsg(1, 'Invalid Email!', 'Please Enater A Valid Email', 4000, 'b');
     }
+
 
 }
 
