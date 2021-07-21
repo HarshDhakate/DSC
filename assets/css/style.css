@@ -423,7 +423,7 @@ footer {
 }
 
 .border-16 {
-    border-radius: 16px;
+    border-radius: 16px!important;
 }
 
 .border-24 {
@@ -554,7 +554,7 @@ nav {
     content: "";
     color: var(--Light-color);
     z-index: -1;
-    font-size: 70px;
+    font-size: 50px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -565,6 +565,10 @@ nav {
 
 #about-us::before {
     content: "About Us";
+}
+
+#coc::before {
+    content: "Code Of Conduct";
 }
 
 #Opportunities::before {
@@ -586,13 +590,13 @@ nav {
     overflow: hidden;
 }
 
-.card-header {
+.Oppotunities .card-header {
     min-height: 320px;
     background-color: var(--Primary-color)!important;
     border-radius: 16px!important;
 }
 
-.card-header::before {
+.Oppotunities .card-header::before {
     position: absolute;
     content: "";
     color: var(--Light-color);
@@ -639,7 +643,7 @@ nav {
     content: "Events";
 }
 
-.card-header::after {
+.Oppotunities .card-header::after {
     position: absolute;
     content: "";
     background-color: var(--Light-color);
@@ -656,7 +660,7 @@ nav {
     transition: all .5s ease;
 }
 
-.card-header:hover::after {
+.Oppotunities .card-header:hover::after {
     height: 250px;
     width: 260px;
     top: -150px;
@@ -664,29 +668,29 @@ nav {
     transform: translateX(50%);
 }
 
-.card-header:hover::before {
+.Oppotunities .card-header:hover::before {
     top: 60%;
     font-size: 26px;
 }
 
-.card-img-top {
+.Oppotunities .card-img-top {
     height: 70px;
     width: 70px;
     filter: url('#warm-sea');
     margin-top: 100px;
 }
 
-.card-header:hover .card-img-top {
+.Oppotunities .card-header:hover .card-img-top {
     margin-top: 10px;
 }
 
-.card-text-hidden {
+.Oppotunities .card-text-hidden {
     height: 0px;
     opacity: 0;
     transform: scale(2);
 }
 
-.card-header:hover .card-text-hidden {
+.Oppotunities .card-header:hover .card-text-hidden {
     transform: scale(1);
     height: 70px;
     margin-top: 20px;
@@ -780,4 +784,25 @@ nav {
         background-color: transparent;
         box-shadow: none!important;
     }
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.outline-none,
+.outline-none:focus,
+.outline-none:active,
+.outline-none:hover {
+    outline: none!important;
+}
+
+.accordation::after {
+    content: "↑";
+    float: right;
+}
+
+.collapsed.accordation::after {
+    content: "↓";
+    float: right;
 }
