@@ -823,3 +823,18 @@ nav {
 .shadow-all-color {
     box-shadow: var(--Red-color-05) -3px -3px 3px 1px, var(--Green-color-05) 3px -3px 3px 1px, var(--Yellow-color-05) 3px 3px 3px 1px, var(--Blue-color-05) -3px 3px 3px 1px;
 }
+
+.card-info {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: var(--Blue-color-05);
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
