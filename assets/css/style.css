@@ -583,6 +583,10 @@ nav {
     content: "Team";
 }
 
+#Events::before {
+    content: "Events";
+}
+
 #Opportunities::before {
     content: "Opportunities";
 }
