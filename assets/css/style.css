@@ -783,19 +783,19 @@ nav {
     background-position: 70px 40px;
 }
 
-.collapse {
-    opacity: 1;
-    background-color: var(--Primary-color);
-    margin-top: 20px;
-    box-shadow: var(--shadow-1);
+.HomePage .collapse {
+    opacity: 1!important;
+    margin-top: 0px;
+    background-color: transparent;
+    box-shadow: none!important;
 }
 
-@media screen and (min-width: 1200px) {
-    .collapse {
-        opacity: 1!important;
-        margin-top: 0px;
-        background-color: transparent;
-        box-shadow: none!important;
+@media screen and (max-width: 991px) {
+    .HomePage .collapse {
+        opacity: 1;
+        background-color: var(--Primary-color);
+        margin-top: 20px;
+        box-shadow: var(--shadow-1);
     }
 }
 
