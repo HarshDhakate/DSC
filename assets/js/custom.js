@@ -37,7 +37,6 @@ window.onload = function() {
 
 function ToogleMenu() {
     $(".navbar-nav").toggleClass("Nav-Display-None");
-    document.getElementsByClassName("nav-item")[OnloadPage].classList.add("active");
 }
 
 function ScrollToTop() {
