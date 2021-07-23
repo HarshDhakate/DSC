@@ -517,8 +517,8 @@ nav {
 }
 
 .c-scrollbar_thumb {
-    background-color: var(--Secondary-color-2)!important;
-    opacity: 1!important;
+    background-color: var(--muted-color)!important;
+    opacity: 0.5!important;
 }
 
 @keyframes spiner {
