@@ -117,11 +117,12 @@ a:hover {
 }
 
 .smooth-transition,
-html {
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transition: all .4s ease;
+html,
+body {
+    -webkit-transition: all .4s ease!important;
+    -moz-transition: all .4s ease!important;
+    -o-transition: all .4s ease!important;
+    transition: all .4s ease!important;
 }
 
 .transistion-dealy-01 {
