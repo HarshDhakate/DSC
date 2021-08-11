@@ -241,9 +241,15 @@ function GetDarkModeCookie() {
     }
 }
 
+var timer;
+
+
 function updateScroller() {
-    setTimeout(() => {
+    timer = setInterval(() => {
         scroller.update();
+    }, 15);
+    setTimeout(() => {
+        clearInterval(timer);
     }, 350);
 
 }
