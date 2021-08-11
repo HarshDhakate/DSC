@@ -1,10 +1,10 @@
-var scroll;
+var scroller;
 
 window.onload = function() {
     DisplayDarkMode();
     document.getElementById("preloader").style.opacity = "0";
 
-    scroll = new LocomotiveScroll({
+    scroller = new LocomotiveScroll({
         el: document.getElementById('body'),
         smooth: true,
         lerp: 0.075,
@@ -40,7 +40,7 @@ function ToogleMenu() {
 }
 
 function ScrollToTop() {
-    scroll.scrollTo("top");
+    scroller.scrollTo("top");
 }
 
 async function DisplayMsg(cssClass, HeadingText, ContentText, timer, pos) {
@@ -239,4 +239,11 @@ function GetDarkModeCookie() {
         SetDarkModeCookie(false);
         return "false";
     }
+}
+
+function updateScroller() {
+    setTimeout(() => {
+        scroller.update();
+    }, 350);
+
 }
