@@ -254,6 +254,10 @@ body {
     color: var(--Red-color);
 }
 
+.fg-red-hover:hover {
+    color: var(--Red-color);
+}
+
 .fg-blue {
     color: var(--Blue-color);
 }
@@ -262,7 +266,16 @@ body {
     color: var(--Yellow-color);
 }
 
+.fg-yellow-hover:hover {
+    color: var(--Yellow-color);
+}
+
+
 .fg-green {
+    color: var(--Green-color);
+}
+
+.fg-green-hover:hover {
     color: var(--Green-color);
 }
 
