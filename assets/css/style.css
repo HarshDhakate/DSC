@@ -819,7 +819,8 @@ nav {
 }
 
 @media screen and (max-width: 991px) {
-    .HomePage .collapse {
+    .navbar-collapse.collapsing,
+    .navbar-collapse.collapse {
         opacity: 1;
         background-color: var(--Primary-color);
         margin-top: 20px;
